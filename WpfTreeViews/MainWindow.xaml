@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TreeView x:Name="FolderView">
+            <TreeView.Resources>
+                <Style TargetType="{x:Type TreeViewItem}">
+                    
+                </Style>
+            </TreeView.Resources>
+        </TreeView>
+
+        <Button Content="Hello" Width="100" Height="30" Foreground="White" FontSize="16">
+            <Button.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="blue" BorderThickness="2" CornerRadius="15">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 </Window>
